@@ -1,5 +1,5 @@
 {
-    "name": "byrontudhope/laravel-push-notification",
+    "name": "byrontudhope/pushnotificationlaravel",
     "description": "Laravel 5 Package for sending push notifications to Android and iOS devices",
     "keywords": ["apns", "gcm", "push", "notification", "laravel", "laravel 5"],
     "license": "MIT",
