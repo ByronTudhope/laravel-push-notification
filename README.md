@@ -7,21 +7,21 @@ Installation
 
 Update your `composer.json` file to include this package as a dependency
 ```json
-"witty/laravel-push-notification": "dev-master"
+"byrontudhope/laravel-push-notification": "dev-master"
 ```
 
 
 Register the PushNotification service provider by adding it to the providers array in the `config/app.php` file.
 ```php
 'providers' => array(
-    'Witty\LaravelPushNotification\PushNotificationServiceProvider'
+    'ByronTudhope\LaravelPushNotification\PushNotificationServiceProvider'
 )
 ```
 
 Alias the PushNotification facade by adding it to the aliases array in the `config/app.php` file.
 ```php
 'aliases' => array(
-	'PushNotification'      => 'Witty\LaravelPushNotification\PushNotification',
+	'PushNotification'      => 'ByronTudhope\LaravelPushNotification\PushNotification',
 )
 ```
 

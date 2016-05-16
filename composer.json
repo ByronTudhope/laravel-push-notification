@@ -1,12 +1,12 @@
 {
-    "name": "witty/laravel-push-notification",
+    "name": "byrontudhope/laravel-push-notification",
     "description": "Laravel 5 Package for sending push notifications to Android and iOS devices",
     "keywords": ["apns", "gcm", "push", "notification", "laravel", "laravel 5"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Larkin Whitaker",
-            "email": "larkinwhitaker@gmail.com"
+            "name": "Byron Tudhope",
+            "email": "byrontudhope@gmail.com"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Witty\\LaravelPushNotification": "src/"
+            "ByronTudhope\\LaravelPushNotification": "src/"
         }
     },
     "minimum-stability": "stable"

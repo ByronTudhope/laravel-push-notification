@@ -1,6 +1,6 @@
 <?php 
 
-namespace Witty\LaravelPushNotification;
+namespace ByronTudhope\LaravelPushNotification;
 
 use Illuminate\Support\Facades\Facade;
 

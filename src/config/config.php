@@ -4,7 +4,7 @@ return [
 
     'iOS'     => [
         'environment' => env('IOS_PUSH_ENV', 'development'),
-        'certificate' => env('IOS_PUSH_CERT', __DIR__ . '/ios-push-notification-certificates/development/certificate.pem'), 
+        'certificate' => env('IOS_PUSH_CERT', __DIR__ . '/ios-push-notification-certificates/development/'), 
         'passPhrase'  => env('IOS_PUSH_PASSWORD', 'password'),
         'service'     => 'apns'
     ],

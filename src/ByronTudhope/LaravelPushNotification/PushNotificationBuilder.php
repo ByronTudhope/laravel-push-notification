@@ -1,28 +1,34 @@
 <?php 
 
-namespace Witty\LaravelPushNotification;
+namespace ByronTudhope\LaravelPushNotification;
 
 use Illuminate\Support\Facades\Config;
-use Witty\LaravelPushNotification\PushNotifier;
+use ByronTudhope\LaravelPushNotification\PushNotifier;
 
 class PushNotificationBuilder 
 {
 	/**
 	 * @param mixed $platform_name
-	 * @return \Witty\LaravelPushNotification\PushNotifier
+	 * @return \ByronTudhope\LaravelPushNotification\PushNotifier
 	 */
-    public function app($platform_name)
+    public function app($platform_name, $program = 'certificate')
     {
-    	$config = [];
+        $config = [];
 
-    	if ( is_string($platform_name) )
-    	{
-    		$config = Config::get('pushnotification.' . $platform_name);
-    	}
-    	else if ( is_array($platform_name) )
-    	{
-    		$config = $platform_name;
-    	}
+        if ( is_string($platform_name) )
+        {
+            $config = Config::get('pushnotification.' . $platform_name);
+        }
+        else if ( is_array($platform_name) )
+        {
+            $config = $platform_name;
+        }
+
+        if (ends_with($config['certificate'], '/')) {
+            $config['certificate'] = $config['certificate'].$program.'.pem';
+        } else {
+            $config['certificate'] = $config['certificate'].'/'.$program.'.pem';
+        }
 
         return new PushNotifier( $config );
     }

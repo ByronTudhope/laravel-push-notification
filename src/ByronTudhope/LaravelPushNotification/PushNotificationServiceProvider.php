@@ -1,9 +1,9 @@
 <?php 
 
-namespace Witty\LaravelPushNotification;
+namespace ByronTudhope\LaravelPushNotification;
 
 use Illuminate\Support\ServiceProvider;
-use Witty\LaravelPushNotification\PushNotificationBuilder;
+use ByronTudhope\LaravelPushNotification\PushNotificationBuilder;
 
 class PushNotificationServiceProvider extends ServiceProvider 
 {
@@ -22,8 +22,8 @@ class PushNotificationServiceProvider extends ServiceProvider
     public function boot()
     {
     	$this->app->bind(
-            'Witty\LaravelPushNotification\PushNotificationBuilder',
-            'Witty\LaravelPushNotification\PushNotifier'
+            'ByronTudhope\LaravelPushNotification\PushNotificationBuilder',
+            'ByronTudhope\LaravelPushNotification\PushNotifier'
         );
 
         $this->publishes([
