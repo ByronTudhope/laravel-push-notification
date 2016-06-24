@@ -24,10 +24,12 @@ class PushNotificationBuilder
             $config = $platform_name;
         }
 
-        if (ends_with($config['certificate'], '/')) {
-            $config['certificate'] = $config['certificate'].$program.'.pem';
-        } else {
-            $config['certificate'] = $config['certificate'].'/'.$program.'.pem';
+        if (isset($config['certificate'])) {
+            if (ends_with($config['certificate'], '/')) {
+                $config['certificate'] = $config['certificate'].$program.'.pem';
+            } else {
+                $config['certificate'] = $config['certificate'].'/'.$program.'.pem';
+            }
         }
 
         return new PushNotifier( $config );
